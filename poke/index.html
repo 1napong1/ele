@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body theme="light">
+    
+    <div class="mainBox" id="mainBox" >
+        <div class="box">
+            <img src="b3.jpg" alt="girl">
+        </div>
+        
+        <div class="cir a " id="notification">
+            <i class="fa-solid fa-bell"></i>
+            <div class="noti">2</div>
+        </div>
+        <div class="cir " id="settings"><i class="fa-solid fa-gear"></i></div>
+        <div class="cir c" id="theme" onmouseenter="picHover()" onmouseleave="picOut()" onclick="toggleIcon()">
+            <i class="fa-solid fa-sun" id="sun"></i>
+        </div>
+        <div class="rec rec1" ><i class="fa-solid fa-house"></i>Home</div>
+        <div class="rec rec2" ><i class="fa-solid fa-user-large"></i>Profile</div>
+        <div class="rec rec3" ><i class="fa-brands fa-wizards-of-the-coast"></i>Pokedex</div>
+        <div class="rec rec4" ><i class="fa-solid fa-file"></i>File</div>
+        <div class="rec rec5" ><i class="fa-solid fa-coins"></i>Coin</div>
+    </div>
+    <div class="minor" id="minor"></div>
+    <div class="btn-start d" id="mainBtn"><i class="fa-solid fa-bars"></i></div>
+    <i class="fa-sharp fa-solid fa-brightness"></i>
+    <script src="main.js"></script>
+</body>
+
+</html>

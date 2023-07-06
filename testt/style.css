@@ -1,0 +1,182 @@
+
+:root,[theme=light]{
+  --width:100px;
+  --color:#fff;
+}
+
+[theme=dark]{
+  --color:#000;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  position: relative;
+}
+
+.change{
+  background-color: #db0e0e;
+}
+
+
+.light-theme {
+  /* CSS properties for the light theme */
+  background-color: #fff;
+  
+}
+
+.dark-theme {
+  /* CSS properties for the dark theme */
+  background-color: #000;
+}
+
+.cover {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  background-color: #db0e0e;
+}
+
+
+
+.cover:hover + .box{
+  background-color: aqua;
+}
+
+
+
+
+.targetElement {
+  /* opacity: 1; */
+  /* overflow: hidden; */
+  height: 50px;
+  width: 50px;
+  /* transition: opacity 0.5s, height 0.5s; */
+  /* display: flex; */
+  background-color: aqua;
+}
+
+.triggerElement:hover + .targetElement {
+  /* opacity: 1; */
+  /* height: auto; */
+  background-color: bisque;
+
+}
+
+
+.gradient-element {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(30deg, rgb(87, 69, 74) 0%, rgb(32, 28, 3) 100%);
+  transition: background-image 0.5s ease-in-out;
+}
+
+@keyframes changeGradient {
+  0% {
+    background: linear-gradient(30deg, rgb(87, 69, 74) 0%, rgb(32, 28, 3) 100%);
+  }
+  100% {
+    background: linear-gradient(30deg, rgba(203, 64, 104, 1) 0%, rgba(253, 223, 45, 1) 100%);
+  }
+}
+
+.gradient-element.animating {
+  animation: changeGradient 1000ms infinite;
+}
+
+
+#btn{
+
+  top: 100px;
+  position: absolute;
+}
+
+/* .box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #bd2626;
+  right: 200px;
+  transition: .5s ease-in-out;
+
+} */
+
+/* .box2{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #1572dd;
+  right: 200px;
+  transition: .5s ease-in-out;
+} */
+
+@keyframes moveTest {
+  100% {
+    right:100px;
+    /* background:blue ; */
+  }
+}
+
+@keyframes moveTest2 {
+  100% {
+    right:80px;
+    /* background:blue ; */
+  }
+}
+
+.box.ani {
+  animation: moveTest .5s ;
+}
+
+.box2.ani2 {
+  animation: moveTest2 ;
+}
+
+/* #box1 , #box2{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  transition: left 0.3s ease;
+  margin-bottom: 10px;
+}
+
+#box2 {
+  background-color: #1572dd;
+  z-index: -1;
+} */
+/* 
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease;
+  margin-bottom: 10px;
+}
+
+#box2 {
+  outline: 10px solid black;
+} */
+
+
+.box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin-bottom: 10px;
+  transition: opacity 1s,left .3s,transform 0.3s;
+  cursor: pointer;
+  left: 200px;
+  transform: translateX(0);
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
