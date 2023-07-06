@@ -88,17 +88,23 @@ let isBoxMoved = true
 document.getElementById("mainBtn").addEventListener("click", () =>{
     const mainBox = document.getElementById("mainBox")
     const minor = document.getElementById("minor")
+    const mainBtnIcon = document.getElementById("btn-icon")
     if (isBoxMoved) {
         showEle()
         mainBox.style.left = "-550px";
         setTimeout(() =>{
             minor.style.left = "-1670px";
+            mainBtnIcon.classList.remove("fa-bars")
+            mainBtnIcon.classList.add("fa-xmark")
         }, 200)
     } else {
+        
         delShowEle()
         minor.style.left = "-2250px";
         setTimeout(() =>{
             mainBox.style.left = "-1080px";
+            mainBtnIcon.classList.remove("fa-xmark")
+            mainBtnIcon.classList.add("fa-bars")
         }, 100)
     }
 
